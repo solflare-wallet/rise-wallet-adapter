@@ -1,12 +1,10 @@
-import { AptosWallet } from "../index";
+import { RiseWallet } from "../index";
 
 /*
 Basic tests to make sure basic variables and functions are defined on the wallet
-
-Note: change AptosWallet to match your class name
 */
-describe("AptosWallet", () => {
-  const wallet = new AptosWallet();
+describe("RiseWallet", () => {
+  const wallet = new RiseWallet();
 
   test("defines name", () => {
     expect(typeof wallet.name).toBe("string");
@@ -34,6 +32,10 @@ describe("AptosWallet", () => {
 
   test("defines signAndSubmitTransaction()", () => {
     expect(typeof wallet.signAndSubmitTransaction).toBe("function");
+  });
+
+  test("defines signTransaction()", () => {
+    expect(typeof wallet.signTransaction).toBe("function");
   });
 
   test("defines signMessage()", () => {
